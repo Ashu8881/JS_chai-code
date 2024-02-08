@@ -30,4 +30,4 @@ JSuser.greetingTow = function(){
     console.log(`hii user ,${this.name}`)
 }
 // console.log(JSuser.greeting())
-console.log(JSuser.greetingTow())
+console.log(JSuser.greetingTow)
