@@ -20,3 +20,4 @@ map((n)=>{return n*10})
   });
 
 console.log(newnums);
+
