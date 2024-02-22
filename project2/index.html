@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BMI Calculate</h1>
+
+    <form action="">
+        <div style="display: flex; flex-direction: column;">
+      <input style="width: 100px; margin: 10px;" placeholder="Enter height" type="text" id="height" class="height" />
+      <input style="width: 100px; margin: 10px;" placeholder="Enter weight" type="text" class="weight" id="weight"/>
+      <span style="height: 30px; width: 45px; padding: 15px">
+        <button id = "submit" class="button">submit</button></span></div>
+        <span style="height: 30px; width: 45px; padding: 15px">Result is 
+            <span placeholder="Your BMI is" class="result" id="result"></span>
+         
+        
+        </span>
+    </form>
+  </body>
+
+  <script>
+
+const form= document.querySelector('form')
+form.addEventListener('submit',(e) => {
+    e.preventDefault()
+const height =  parseInt( document.getElementById('height').value)
+const weight = parseInt( document.getElementById('weight').value)
+const result = document.getElementById('result')
+if( height === ' '  || height < 0 || isNaN(height)){
+    result.innerText = `${height} is not a valid input`
+}
+else if( weight === ' '  || weight < 0 || isNaN(weight)){
+    result.innerText = `${weight} is not a valid input`
+} else result.innerText = (weight/((height*height)/1000)).toFixed(2)
+
+})
+
+  </script>
+</html>
