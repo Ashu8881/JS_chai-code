@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background change using DOM</title>
+    <style> .button {
+    height : 50px;
+    width: 50px;
+    }
+    #red{
+      background-color: red;
+    }
+    #green{
+      background-color: green;
+    }
+    #black{
+      background-color: black;
+    }
+    #gray{
+      background-color: gray;           
+    }
+    #orange{
+
+        background-color: orange;
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="button" id="red"></button>
+      <button class="button" id="green"></button>
+      <button class="button" id="black"></button>
+      <button class="button" id="gray"></button>
+      <button class="button" id="orange"></button>
+    </div>
+  </body>
+  <script>
+
+const getbuttons = document.querySelectorAll('.button')
+const getbody = document.querySelector('body')
+getbuttons.forEach(  (button) => {
+   button.addEventListener( 'click', (e) =>{
+if(e.target.id === 'red'){
+    getbody.backgroundColor = 'red'
+}
+else if(e.target.id === 'green'){
+    getbody.style.backgroundColor = 'green'
+    console.log('green')
+}else if(e.target.id === 'black'){
+    getbody.style.backgroundColor = 'black'
+}else if(e.target.id === 'gray'){
+    getbody.style.backgroundColor = 'gray'
+}else if(e.target.id === 'orange'){
+    getbody.style.backgroundColor = 'orange'
+}
+   })
+  
+})
+
+
+
+  </script>
+ 
+</html>
