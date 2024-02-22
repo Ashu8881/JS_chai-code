@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manuplate DOM</title>
+</head>
+<body>
+    <h1>    languages   </h1>
+</body>
+<script>
+
+    function addtext (name){
+const creatediv = document.createElement('div')
+creatediv.style.width = "200px"
+creatediv.style.height = "20px"
+creatediv.style.margin = "10px"
+creatediv.style.padding = "10px"
+creatediv.style.border = "1px solid black"
+creatediv.style.display = "flex"    
+creatediv.style.justifyContent = "center"
+creatediv.style.alignItems = "center"
+creatediv.style.borderRadius = "10px"
+creatediv.style.color ="white"
+creatediv.style.fontSize = "20px"
+creatediv.style.fontWeight = "bold"
+creatediv.style.textAlign = "center"
+creatediv.style.textDecoration = "underline"
+creatediv.style.textTransform = "capitalize"
+creatediv.style.backgroundColor ="red"
+creatediv.innerHTML =`language is ${name}`
+document.body.appendChild(creatediv)
+    }
+    addtext('javascript')
+    addtext('python')
+    addtext('c')
+</script>
+</html>
