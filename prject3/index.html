@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+body{
+    background-color: gray;
+color: antiquewhite;
+text-align: center;
+
+}
+
+</style>
+</head>
+<body>
+    <h1>  Digital clock</h1>
+<h2 id="clock"></h2>
+
+</body>
+<script>
+
+    const time = document.getElementById('clock')
+    time.style.height= '30px'
+    time.style.width= '100px'
+    time.style.margin= 'auto'
+    time.style.backgroundColor = 'red'
+   setInterval( function () {
+const date = new Date();
+time.innerHTML = date.toLocaleTimeString();
+
+   },1000)
+</script>
+</html>
