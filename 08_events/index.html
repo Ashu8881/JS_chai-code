@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom events</title>
+
+    <style>
+
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head> 
+<body>
+    
+<div>
+    <ul id ='image'>
+        
+      
+            <li><img src="images/image1.jpeg" alt="Image 1"  id="mern1"></li>
+            <li><img src="images/image2.jpeg" alt="Image 2" id="mern2"></li>
+            <li><img src="images/image3.jpeg" alt="Image 3"  id="mern3"></li>
+            <li><img src="images/iamge4.jpeg" alt="Image 4"  id="mern4"></li>
+            <li><img src="images/image5.jpeg" alt="Image 5" id="mern4"></li>
+       
+        
+</div>
+
+
+</body>
+
+<script>
+const image = document.getElementById('image')
+image.addEventListener( 'click', function(e) {
+e.target.remove()
+})
+
+
+</script>
+</html>
