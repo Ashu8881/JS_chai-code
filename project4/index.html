@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html> 
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JS</h2>
+
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+  </body>
+  <script>
+let process
+    const print = function(){console.log('started')}
+ document.getElementById('start').addEventListener('click', function ( ) {
+       process= setInterval(print ,1000)
+    })
+ 
+
+
+
+document.getElementById('stop').addEventListener('click', function(){
+    clearInterval(process)
+})
+  </script>
+</html>

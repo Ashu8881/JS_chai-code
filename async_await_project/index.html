@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h2>Async Await</h2>
+
+    <button id="button">STOP</button>
+  </body>
+  <script>
+    const print = () => {
+      console.log("ashutosh");
+    };
+    setTimeout(print, 2000);
+
+    const chngingText = function () {
+      document.querySelector("h2").innerText = "need change";
+    };
+    const timercount = setTimeout(chngingText, 2000);
+
+
+
+    document.getElementById('button').addEventListener( 'click', function(){
+        console.log('stop')
+        clearTimeout(timercount)
+       
+    })
+
+
+</script>
+</html>
