@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Show Code</h2>
+    <div id="add">Table</div>
+</body>
+<script>
+    const add = document.getElementById("add");
+    window.addEventListener("keydown", (e) => {
+        // console.log(e.keyCode)
+
+        add.innerHTML = ` <div> 
+        <table> 
+            
+         <tr> 
+            <th>name</th>
+            <th>code</th>
+            <th>keycode</th>
+         
+         </tr>
+    
+         <tr>
+          <td>${e.key === ' ' ? 'space' : e.key}</td>
+          <td>${e.code}</td>
+          <td>${e.keyCode}</td>
+         
+         </tr>
+            
+        </table>
+        
+    </div>`;
+    });
+</script>
+
+
+
+</html>
